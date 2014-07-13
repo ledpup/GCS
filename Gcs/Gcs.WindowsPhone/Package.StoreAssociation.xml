@@ -195,5 +195,11 @@
     <MainPackageIdentityName>1587LedEnterprises.OpenOthello</MainPackageIdentityName>
     <MainPackageIdentityName>1587LedEnterprises.SpanishCivilWarQuiz</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=dde98888-87c6-443d-83e3-c2a10b775ba7" />
+  <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=dde98888-87c6-443d-83e3-c2a10b775ba7">
+    <PackageInfo>
+      <OsMinVersion>6.3.0.0</OsMinVersion>
+      <PackageArchitecture>neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.1.0.1</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>

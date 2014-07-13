@@ -1,0 +1,95 @@
+﻿<Page
+    x:Class="Gcs.ApgarPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gcs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="MinWidth" Value="75" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+        <Style x:Key="BigTextBlock" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+        <Style TargetType="HyperlinkButton">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="40" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0" Grid.Row="0" Content="menu" Click="Menu_Click" />
+        <HyperlinkButton Grid.Column="1" Grid.Row="0" Content="apgar score" NavigateUri="http://en.wikipedia.org/wiki/Apgar_score" />
+        <TextBlock Name="GcsScore" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Text="0" Style="{StaticResource BigTextBlock}" />
+
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="APPEARANCE" />
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="PULSE" />
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="GRIMACE" />
+
+        <TextBlock x:Name="Appearance" Grid.Column="0" Grid.Row="3" Text="Blue" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+        <TextBlock x:Name="Pulse" Grid.Column="1" Grid.Row="3" Text="Absent" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+        <TextBlock x:Name="Grimace" Grid.Column="2" Grid.Row="3" Text="No response" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+
+        <Button x:Name="A0" Grid.Column="0" Grid.Row="4" Content="0" Click="Appearance_Click" />
+        <Button x:Name="A1" Grid.Column="0" Grid.Row="5" Content="1" Click="Appearance_Click" />
+        <Button x:Name="A2" Grid.Column="0" Grid.Row="6" Content="2" Click="Appearance_Click" />
+
+        <Button x:Name="P0" Grid.Column="1" Grid.Row="4" Content="0" Click="Pulse_Click" />
+        <Button x:Name="P1" Grid.Column="1" Grid.Row="5" Content="1" Click="Pulse_Click" />
+        <Button x:Name="P2" Grid.Column="1" Grid.Row="6" Content="2" Click="Pulse_Click" />
+
+        <Button x:Name="G0" Grid.Column="2" Grid.Row="4" Content="0" Click="Grimace_Click" />
+        <Button x:Name="G1" Grid.Column="2" Grid.Row="5" Content="1" Click="Grimace_Click" />
+        <Button x:Name="G2" Grid.Column="2" Grid.Row="6" Content="2" Click="Grimace_Click" />
+
+        <TextBlock Grid.Column="0" Grid.Row="7" Text="MUSCLE ACTIVITY" />
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="RESPIRATORY RATE" />
+
+        <TextBlock x:Name="MuscleActivity" Grid.Column="0" Grid.Row="8" Text="Flaccid" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+        <TextBlock x:Name="RespiratoryRate" Grid.Column="1" Grid.Row="8" Text="Absent" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+
+        <Button x:Name="M0" Grid.Column="0" Grid.Row="9" Content="0" Click="MuscleActivity_Click" />
+        <Button x:Name="M1" Grid.Column="0" Grid.Row="10" Content="1" Click="MuscleActivity_Click" />
+        <Button x:Name="M2" Grid.Column="0" Grid.Row="11" Content="2" Click="MuscleActivity_Click" />
+
+        <Button x:Name="R0" Grid.Column="1" Grid.Row="9" Content="0" Click="Respiratory_Click" />
+        <Button x:Name="R1" Grid.Column="1" Grid.Row="10" Content="1" Click="Respiratory_Click" />
+        <Button x:Name="R2" Grid.Column="1" Grid.Row="11" Content="2" Click="Respiratory_Click" />
+
+        <Button x:Name="NewAttempt" Grid.Column="2" Grid.Row="11" Content="Next" Click="New_Click" Visibility="Collapsed" />
+
+    </Grid>
+</Page>

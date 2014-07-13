@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="1587LedEnterprises.GCS" Publisher="CN=4C21CD0D-E8FD-4545-9469-B8B74DA697F5" Version="1.1.0.1" />
+  <Identity Name="1587LedEnterprises.GCS" Publisher="CN=4C21CD0D-E8FD-4545-9469-B8B74DA697F5" Version="1.1.0.2" />
   <mp:PhoneIdentity PhoneProductId="48a27239-f0eb-4ccb-b4ae-eb0c29e6a0bf" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>GCS</DisplayName>

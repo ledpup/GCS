@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Gcs
 {
-    public class GcsGroups
+    public class GcsCategories
     {
         public static Dictionary<int, string> Eyes = new Dictionary<int, string>
         { 

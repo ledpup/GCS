@@ -5,16 +5,16 @@ using System.Linq;
 
 namespace Gcs
 {
-    public class Gcs
+    public class Pgcs
     {
         public int[] Category = new int[3];
         public int[] SelectedCategory = new int[3];
 
-        public string EyesString { get { return GcsCategories.Eyes[Category[0]]; } }
-        public string VerbalString { get { return GcsCategories.Verbal[Category[1]]; } }
-        public string MotorString { get { return GcsCategories.Motor[Category[2]]; } }
+        public string EyesString { get { return PgcsCategories.Eyes[Category[0]]; } }
+        public string VerbalString { get { return PgcsCategories.Verbal[Category[1]]; } }
+        public string MotorString { get { return PgcsCategories.Motor[Category[2]]; } }
 
-        public Gcs()
+        public Pgcs()
         {
             var random = new Random();
             Category[0] = random.Next(1, 5);

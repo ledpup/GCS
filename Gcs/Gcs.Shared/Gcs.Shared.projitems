@@ -15,7 +15,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Apgar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pgcs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Gcs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)GcsGroups.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ApgarCategories.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PgcsCategories.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GcsCategories.cs" />
   </ItemGroup>
 </Project>

@@ -8,77 +8,17 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.Resources>
-        <Style TargetType="Button">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="MinWidth" Value="75" />
-        </Style>
-        <Style TargetType="TextBlock">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="TextWrapping" Value="Wrap" />
-            <Setter Property="FontSize" Value="13" />
-        </Style>
-        <Style x:Key="BigTextBlock" TargetType="TextBlock">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="FontSize" Value="40" />
-            <Setter Property="TextWrapping" Value="Wrap" />
-        </Style>
-        <Style TargetType="HyperlinkButton">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="FontSize" Value="40" />
-        </Style>
-    </Page.Resources>
-
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
-
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <HyperlinkButton Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Content="glascow coma scale" NavigateUri="http://en.wikipedia.org/wiki/Glasgow_Coma_Scale" />
-        <TextBlock Name="GcsScore" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Text="0" Style="{StaticResource BigTextBlock}" />
 
-        <TextBlock Grid.Column="0" Grid.Row="2" Text="EYES" />
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="VERBAL" />
-        <TextBlock Grid.Column="2" Grid.Row="2" Text="MOTOR" />
-
-        <TextBlock x:Name="Eyes" Grid.Column="0" Grid.Row="3" Text="Spontaneous" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
-        <TextBlock x:Name="Verbal" Grid.Column="1" Grid.Row="3" Text="Orientated" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
-        <TextBlock x:Name="Motor" Grid.Column="2" Grid.Row="3" Text="Command" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
-
-        <Button x:Name="E4" Grid.Column="0" Grid.Row="6" Content="4" Click="Eye_Click" />
-        <Button x:Name="E3" Grid.Column="0" Grid.Row="7" Content="3" Click="Eye_Click" />
-        <Button x:Name="E2" Grid.Column="0" Grid.Row="8" Content="2" Click="Eye_Click" />
-        <Button x:Name="E1" Grid.Column="0" Grid.Row="9" Content="1" Click="Eye_Click" />
-
-        <Button x:Name="V5" Grid.Column="1" Grid.Row="5" Content="5" Click="Verbal_Click" />
-        <Button x:Name="V4" Grid.Column="1" Grid.Row="6" Content="4" Click="Verbal_Click" />
-        <Button x:Name="V3" Grid.Column="1" Grid.Row="7" Content="3" Click="Verbal_Click" />
-        <Button x:Name="V2" Grid.Column="1" Grid.Row="8" Content="2" Click="Verbal_Click" />
-        <Button x:Name="V1" Grid.Column="1" Grid.Row="9" Content="1" Click="Verbal_Click" />
-
-        <Button x:Name="M6" Grid.Column="2" Grid.Row="4" Content="6" Click="Motor_Click" />
-        <Button x:Name="M5" Grid.Column="2" Grid.Row="5" Content="5" Click="Motor_Click" />
-        <Button x:Name="M4" Grid.Column="2" Grid.Row="6" Content="4" Click="Motor_Click" />
-        <Button x:Name="M3" Grid.Column="2" Grid.Row="7" Content="3" Click="Motor_Click" />
-        <Button x:Name="M2" Grid.Column="2" Grid.Row="8" Content="2" Click="Motor_Click" />
-        <Button x:Name="M1" Grid.Column="2" Grid.Row="9" Content="1" Click="Motor_Click" />
-
-        <Button x:Name="NewAttempt" Grid.Column="0" Grid.Row="4" Content="Next" Click="New_Click" Visibility="Collapsed" />
-
+        <Button Grid.Row="1" Content="GCS" HorizontalAlignment="Center" Click="Gcs_Click" />
+        <Button Grid.Row="2" Content="Apgar" HorizontalAlignment="Center" Click="Apgar_Click" />
+        <Button Grid.Row="3" Content="PGCS" HorizontalAlignment="Center" Click="Pgcs_Click" />
     </Grid>
 </Page>
