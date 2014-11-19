@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="Gcs.VitalSignsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gcs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="MinWidth" Value="75" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+        <Style x:Key="BigTextBlock" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+        </Style>
+        <Style TargetType="HyperlinkButton">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="40" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <HyperlinkButton Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Content="vital signs" NavigateUri="http://en.wikipedia.org/wiki/Glasgow_Coma_Scale" />
+        <TextBlock Name="GcsScore" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Text="0" Style="{StaticResource BigTextBlock}" />
+
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="RESPIRATORY RATE" />
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="HEART RATE" />
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="SYSTOLIC BLOOD PRESSURE" />
+        <TextBlock Grid.Column="3" Grid.Row="2" Text="WEIGHT" />
+
+        <TextBlock x:Name="RespiratoryRate" Grid.Column="0" Grid.Row="3" Text="30-50" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+        <TextBlock x:Name="HeartRate" Grid.Column="1" Grid.Row="3" Text="120-160" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+        <TextBlock x:Name="BloodPressure" Grid.Column="2" Grid.Row="3" Text="60-90" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+        <TextBlock x:Name="Weight" Grid.Column="3" Grid.Row="3" Text="4-5" FontSize="15" TextAlignment="Center" Foreground="Yellow" />
+
+        <Button x:Name="RR1" Grid.Column="0" Grid.Row="4" Content="Newborn" Click="Eye_Click" />
+        <Button x:Name="RR2" Grid.Column="0" Grid.Row="5" Content="Infant" Click="Eye_Click" />
+        <Button x:Name="RR3" Grid.Column="0" Grid.Row="6" Content="1-3 yrs" Click="Eye_Click" />
+        <Button x:Name="RR4" Grid.Column="0" Grid.Row="7" Content="3-5 yrs" Click="Eye_Click" />
+        <Button x:Name="RR5" Grid.Column="0" Grid.Row="8" Content="6-12 yrs" Click="Eye_Click" />
+        <Button x:Name="RR7" Grid.Column="0" Grid.Row="9" Content="13-16 yrs" Click="Eye_Click" />
+
+        <Button x:Name="V5" Grid.Column="1" Grid.Row="5" Content="5" Click="Verbal_Click" />
+        <Button x:Name="V4" Grid.Column="1" Grid.Row="6" Content="4" Click="Verbal_Click" />
+        <Button x:Name="V3" Grid.Column="1" Grid.Row="7" Content="3" Click="Verbal_Click" />
+        <Button x:Name="V2" Grid.Column="1" Grid.Row="8" Content="2" Click="Verbal_Click" />
+        <Button x:Name="V1" Grid.Column="1" Grid.Row="9" Content="1" Click="Verbal_Click" />
+
+        <Button x:Name="M6" Grid.Column="2" Grid.Row="4" Content="6" Click="Motor_Click" />
+        <Button x:Name="M5" Grid.Column="2" Grid.Row="5" Content="5" Click="Motor_Click" />
+        <Button x:Name="M4" Grid.Column="2" Grid.Row="6" Content="4" Click="Motor_Click" />
+        <Button x:Name="M3" Grid.Column="2" Grid.Row="7" Content="3" Click="Motor_Click" />
+        <Button x:Name="M2" Grid.Column="2" Grid.Row="8" Content="2" Click="Motor_Click" />
+        <Button x:Name="M1" Grid.Column="2" Grid.Row="9" Content="1" Click="Motor_Click" />
+
+        <Button x:Name="NewAttempt" Grid.Column="0" Grid.Row="4" Content="Next" Click="New_Click" Visibility="Collapsed" />
+
+    </Grid>
+</Page>
